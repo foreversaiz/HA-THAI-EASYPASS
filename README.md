@@ -28,6 +28,7 @@ sensor:
     username: "user@gmail.com"
     password: "password"
     scan_interval: 300
+  - platform: easypass
     name: "easypass_balance_2"
     offset: "2"
     username: "user@gmail.com"
