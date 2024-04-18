@@ -27,7 +27,10 @@ class EasyPassInstance:
                     attr = { "ทะเบียนรถ": cards[self._offset]['ทะเบียนรถ'], "เลขสมาร์ทการ์ด": cards[self._offset]['เลขสมาร์ทการ์ด (S/N)']}
                     return cards[self._offset]['จำนวนเงิน'] , attr
                 except:
-                    return cards , ""
+                    length = len(cards)
+                    attr = []
+                    attr = { "offset": self._sensor["offset"], "ควรตั้งoffsetเป็น": length}
+                    return cards , attr
         
 
 
