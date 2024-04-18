@@ -1,0 +1,1 @@
+"""Thai EasyPass App integration."""
