@@ -1,5 +1,6 @@
 HOME ASSUSTANT THAI EASYPASS
 
+![alt text](https://github.com/foreversaiz/HA-THAI-EASYPASS/blob/main/show.png)
 
 ดึงยอดเงินคงเหลือของบัตร Easypass ครับ จากเดิม คุณ wit จาก line group เขียนเป็น python ผมเลยนำมาแปลงเป็น custom_component ครับ
 
