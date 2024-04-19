@@ -25,7 +25,9 @@ class EasyPassInstance:
                 try:
                     attr = []
                     attr = { "ทะเบียนรถ": cards[self._offset]['ทะเบียนรถ'], "เลขสมาร์ทการ์ด": cards[self._offset]['เลขสมาร์ทการ์ด (S/N)']}
-                    return cards[self._offset]['จำนวนเงิน'] , attr
+                    balance_value = cards[self._offset]['จำนวนเงิน']
+                    balance_value = balance_value.replace(",", "")
+                    return balance_value , attr
                 except:
                     length = len(cards)
                     attr = []
