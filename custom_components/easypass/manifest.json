@@ -1,7 +1,7 @@
 {
     "domain" : "easypass",
     "name" : "Thai EasyPass",
-    "codeowners": ["Foreversaiz"],
+    "codeowners": ["@Foreversaiz"],
     "dependencies": [],
     "documentation": "https://github.com/foreversaiz/HA-THAI-EASYPASS",
     "iot_class": "cloud_polling",
