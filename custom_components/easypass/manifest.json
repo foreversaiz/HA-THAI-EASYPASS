@@ -4,7 +4,7 @@
     "codeowners": ["Foreversaiz"],
     "dependencies": [],
     "documentation": "https://github.com/foreversaiz/HA-THAI-EASYPASS",
-    "iot_class": "local_polling",
+    "iot_class": "cloud_polling",
     "requirements": [],
     "version" : "0.1.2"
 }
