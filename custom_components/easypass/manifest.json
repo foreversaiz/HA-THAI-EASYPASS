@@ -6,7 +6,7 @@
     "documentation": "https://github.com/foreversaiz/HA-THAI-EASYPASS",
     "iot_class": "cloud_polling",
     "requirements": [],
-    "version" : "0.1.2"
+    "version" : "0.1.3"
 }
 
 
