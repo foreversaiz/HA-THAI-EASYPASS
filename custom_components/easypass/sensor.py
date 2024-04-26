@@ -68,7 +68,7 @@ class EasyPassSensor(SensorEntity):
         self._extra_attributes = None
     
     @property
-    def extra_state_attributes(self, value):
+    def extra_state_attributes(self):
         return self._extra_attributes
 
     @extra_state_attributes.setter
