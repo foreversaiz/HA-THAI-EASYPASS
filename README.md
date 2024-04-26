@@ -1,14 +1,15 @@
-HOME ASSUSTANT THAI EASYPASS
+# Custom Home Assistant Component for Thailand's Easy Pass Tollway
 
-![alt text](https://github.com/foreversaiz/HA-THAI-EASYPASS/blob/main/show.png)
+![หน้าจอ Home Assistant แสดงยอด Easy Pass](https://github.com/foreversaiz/HA-THAI-EASYPASS/blob/main/show.png)
 
-ดึงยอดเงินคงเหลือของบัตร Easypass ครับ จากเดิม คุณ wit จาก line group เขียนเป็น python ผมเลยนำมาแปลงเป็น custom_component ครับ
+Integration/Custom Component สำหรับ Home Assistant เพื่อดึงยอดจาก Easy Pass ดัดแปลงจากโค้ดของคุณ wit จาก LINE กลุ่ม
 
 
 <p><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=foreversaiz&amp;repository=HA-THAI-EASYPASS&amp;category=integration" target="_blank" rel="noreferrer noopener"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Open your Home Assistant instance and open a repository inside the Home Assistant Community Store."></a></p>
 
+## วิธีการใช้งาน
 
-เพิ่ม configuration ที่ configuration.yaml
+เพิ่ม configuration ที่ `configuration.yaml`
 ```
 sensor:
   - platform: easypass
@@ -19,7 +20,10 @@ sensor:
     scan_interval: 300
 ```
 
-offset คืออันดับของการ์ดที่มี ถ้ามีอันเดียวให้ใส่ 1 แต่กรณีมีหลายอันให้ใส่แบบนี้
+`offset` คืออันดับของบัตรที่ดึงมาแสดงจากชื่อผู้ใช้-รหัสผ่านที่ให้ หากมีบัตรใบเดียวให้ใส่เป็น `"1"` เสมอ
+
+หรือการตั้งค่ากรณีมีหลายใบ ซึ่งจะทำให้ได้ entity แยกกันสำหรับบัตรทั้งสองใบ
+
 ```
 sensor:
   - platform: easypass
@@ -35,4 +39,3 @@ sensor:
     password: "password"
     scan_interval: 300
 ```
-ด้วยวิธีด้านบนจะได้ entity 2 ตัว
