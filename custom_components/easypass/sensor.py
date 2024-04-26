@@ -63,9 +63,7 @@ class EasyPassSensor(SensorEntity):
         _LOGGER.info(pformat(sensor))
 
         self._name = sensor["name"]
-        self._attr_native_value = None
         self._value = EasyPassInstance(sensor)
-        self.extra_state_attributes = None
         self._attr_unique_id = sensor["name"]
 
     @property
