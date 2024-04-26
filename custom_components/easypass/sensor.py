@@ -65,15 +65,15 @@ class EasyPassSensor(SensorEntity):
         self._name = sensor["name"]
         self._value = EasyPassInstance(sensor)
         self._attr_unique_id = sensor["name"]
-        self._extra_attribute = None
+        self._extra_attributes = None
     
     @property
-    def extra_state_attribute(self, value):
-        return self._extra_attribute
+    def extra_state_attributes(self, value):
+        return self._extra_attributes
 
-    @extra_state_attribute.setter
-    def extra_state_attribute(self, value):
-        self._extra_attribute = value
+    @extra_state_attributes.setter
+    def extra_state_attributes(self, value):
+        self._extra_attributes = value
 
     @property
     def name(self) -> str:
