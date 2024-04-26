@@ -22,15 +22,13 @@ DATETIME_FORMAT = '%Y/%m/%dT%H:%M:%S%z'  # ISO 8601
 EASYPASS_RETRY_WAIT_SEC = 300
 
 class LoginEasyPass:
-
     def login_easypass(session,login):
         #_LOGGER.info(login)
         session.get(EASYPASS_LOGIN_URL)
         headers = {"Content-Type": "application/x-www-form-urlencoded"}
-        payload = f"email={login["username"]}&password={login["password"]}"
+        payload = f"email={login['username']}&password={login['password']}"
         session.post(EASYPASS_SIGNIN_URL, data=payload, headers=headers)
 
-    
     def get_response(session, url, min_cont_size=MIN_CONTENT_SIZE):
         global REFRESH_SEC
         result = None
